@@ -1,0 +1,16 @@
+:root {
+    --cor1: #21C25E;
+    --cor2: #38d88b;
+    --cor3:#78e0ae;
+}
+
+.res {
+    width: fit-content;
+    height: fit-content;
+    display: row wrap;
+    background-color: var(--cor3);
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #21C25E;
+    display: none;
+}

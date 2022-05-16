@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useRef } from 'react';
+import Inputs from './components/Inputs.js';
+import Header from './components/Header.js';
+import Baixe from './components/Baixe.js';
+import Resultados from './components/Resultados';
 
 function App() {
+  const containerRef = useRef()
+  document.body.scrollTop = -1000;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" ref={containerRef}>
+      <Header/> 
+      <Inputs/>
+      <Baixe/>
+      <Resultados/>
     </div>
-  );
+  )
 }
 
 export default App;
