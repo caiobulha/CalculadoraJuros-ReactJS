@@ -6,8 +6,6 @@ import Baixe from './components/Baixe.js';
 import Resultados from './components/Resultados';
 
 function App() {
-  const containerRef = useRef()
-  document.body.scrollTop = -1000;
   return (
     <div className="App" ref={containerRef}>
       <Header/> 
