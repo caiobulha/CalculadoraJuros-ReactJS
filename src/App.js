@@ -7,7 +7,7 @@ import Resultados from './components/Resultados';
 
 function App() {
   return (
-    <div className="App" ref={containerRef}>
+    <div className="App">
       <Header/> 
       <Inputs/>
       <Baixe/>
