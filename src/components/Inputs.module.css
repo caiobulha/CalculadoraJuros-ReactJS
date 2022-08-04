@@ -28,23 +28,33 @@ body {
     height: 7vh ;
     cursor:pointer; 
     margin-bottom: 20px;
-    background-color: var(--cor3);
-    border-radius: 15px;
-    border-color: var(--cor1);
+    border-radius: 5px;
     transition-duration: 0.5s;
+    color: black;
+    font-weight: bold;
+    transition-duration: .5s;
+    border: 1px solid #21C25E;
 }
 
 .calcularSelic {
-    background-color: #111111;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
     border: 1px solid #21C25E;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 16vw;
     height: 7vh;
+    transition-duration: .5s;
 }
 
 .calcular:hover {
-    transition-duration: 0.5s;
-    transform: scale(1.05);
+    transition-duration: .5s;
+    transform: scale(1.01);
+}
+
+.calcularSelic:hover {
+    transition-duration: .5s;
+    transform: scale(1.01);
 }
 
 button:active,
@@ -83,18 +93,33 @@ box-shadow: none;
 
 .inputs input:hover {
     transition-duration: 0.5s;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-.result {
-    width: 50vh;
-    max-height: 90vh;
+.res {
+    display: none;
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    left: 335px;
+    color: black;
+    padding: 20px;
+    width: 50%;
+    max-height: 90%;
     font-size: 1.1em;
+    background-color: white;
+    border: 3px #21C25E solid;
+    border-radius: 5px;
+}
+
+.resultados {
+    color: #21C25E;
+    
 }
 
 @media only screen and (max-width: 600px) {
-    .calcular {
-        margin-bottom: 110px;
+    .calcular, .calcularSelic {
+        width: 60vw;
     }
 }
 

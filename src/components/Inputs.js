@@ -6,6 +6,7 @@ function Inputs() {
     const[valorMensal, setValorMensal] = useState()
     const[jur, setJur] = useState()
     const[par, setPar] = useState()
+    const[showResult, setShowResult] = useState(false)
 
     var i = 1;
     var j = 0;
@@ -13,16 +14,25 @@ function Inputs() {
     var ValorM = parseFloat(valorMensal)
     var ValorF1 = parseFloat(preco);
     var calc = parseFloat(jur/100 + 1)
+    var res = document.getElementById('res')
+    var imp = ""
 
     function Calcular() {
+        setShowResult(true)
+        debugger    
         while (i <= parseFloat(parF)){
             ValorF1 = ValorF1 * calc
             // return
             ValorF1 = ValorF1 + parseFloat(ValorM)
             console.log(ValorF1)
             i++
+            imp = imp + " Mês" + (i - 1) + "R$" + ValorF1.toFixed(2) + "<br>" + "<br> "
         }
-        
+
+        if(showResult === true) {
+            res.style.display = "block"
+        }
+        res.innerHTML = <h1 className={styles.resultados}>Resultados</h1> + "<br>" + imp
     }
 
         function CalcularSelic() {
@@ -36,8 +46,10 @@ function Inputs() {
             }
             
         }
+
     return (
         <div className={styles.inputContainer}>
+            <div className={styles.res} id="res">Resultados</div>
             <div className={styles.inputs}>
                 <input type='number' placeholder='Digite o Valor Inicial:' className={styles.preco} onChange={(e) => setPreco(e.target.value)}></input>
 
@@ -49,8 +61,6 @@ function Inputs() {
 
                 <button className={styles.calcular} onClick={Calcular}>Calcular</button>
                 <button className={styles.calcularSelic} onClick={CalcularSelic}>Calcular (13,25%)</button>
-                <div className={styles.res}></div>
-                <div id={styles.div1}></div>
             </div>
         </div>
     )
