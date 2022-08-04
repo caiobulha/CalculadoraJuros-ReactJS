@@ -1,7 +1,12 @@
+* {
+    color: white;
+}
+
 :root {
     --cor1: #21C25E;
     --cor2: #38d88b;
     --cor3:#78e0ae;
+    --cor4:#111111;
 }
 
 input::-webkit-outer-spin-button,
@@ -10,19 +15,31 @@ input::-webkit-inner-spin-button {
 margin: 0;
 }
 
+body {
+    background-color: #dbdbdb;
+}
+
 .inputContainer {
     box-sizing: border-box;
 }
 
 .calcular {
-    width: 200px;
-    height: 50px;
+    width: 16vw;
+    height: 7vh ;
     cursor:pointer; 
     margin-bottom: 20px;
     background-color: var(--cor3);
     border-radius: 15px;
     border-color: var(--cor1);
     transition-duration: 0.5s;
+}
+
+.calcularSelic {
+    background-color: #111111;
+    border: 1px solid #21C25E;
+    border-radius: 10px;
+    width: 16vw;
+    height: 7vh;
 }
 
 .calcular:hover {
@@ -49,6 +66,7 @@ box-shadow: none;
 
 .inputs input {
     width: 30%;
+    background-color: #111111;
     width: 70vw;
     display: flex;
     flex-direction: column;
@@ -58,14 +76,20 @@ box-shadow: none;
     text-align: center;
     padding: 18px 10px 18px 10px;
     outline: 0;
-    border-radius: 20px;
-    border: 1px solid #000000;
+    border-radius: 10px;
+    border: 2px solid #21C25E;
     transition-duration: 0.5s;
 }
 
 .inputs input:hover {
     transition-duration: 0.5s;
     transform: scale(1.05);
+}
+
+.result {
+    width: 50vh;
+    max-height: 90vh;
+    font-size: 1.1em;
 }
 
 @media only screen and (max-width: 600px) {
